@@ -14,7 +14,6 @@ module.exports = (sequelize, DataTypes) => {
     }
   };
   Event.init({
-    id: DataTypes.INTEGER,
     title: DataTypes.STRING,
     description: DataTypes.TEXT,
     image: DataTypes.STRING,
@@ -23,9 +22,8 @@ module.exports = (sequelize, DataTypes) => {
     allowedAttendees: DataTypes.STRING,
     waitlist: DataTypes.INTEGER,
     startTime: DataTypes.TIME,
-    endTime: DataTypes.TIME,
-    name: DataTypes.STRING
-  }, {
+    endTime: DataTypes.TIME
+    }, {
     sequelize,
     modelName: 'Event',
   });
